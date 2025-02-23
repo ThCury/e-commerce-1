@@ -1,0 +1,56 @@
+@use 'sass:color';
+
+// Variáveis de cor
+$dark-color: #151515;
+$light-gray-color: #828489;
+$gray-color: #46474a;
+
+$light-color: #FCFAF9;
+$light-color2: #e0d8d4;
+
+
+// GARANTA QUE html, body e #root (ou #__next) tenham min-height
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: $light-color2;
+  min-height: 100%; 
+}
+
+/* Container do formulário */
+.product-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: $light-color;
+  padding: 2rem;
+  border-radius: 8px;
+  color: $dark-color;
+
+  .form-title {
+    color: $dark-color;
+    font-weight: bold;
+  }
+
+  // Botão de upload
+  .upload-button {
+    background-color: $dark-color;
+    border: none;
+
+    &:hover {
+      background-color: color.adjust($dark-color, $lightness: 10%);
+    }
+  }
+
+  // Botão de envio
+  .submit-button {
+    background-color: $dark-color;
+    border: none;
+    color: $light-color;
+
+    &:hover {
+      background-color: color.adjust($dark-color, $lightness: 10%);
+    }
+  }
+}
